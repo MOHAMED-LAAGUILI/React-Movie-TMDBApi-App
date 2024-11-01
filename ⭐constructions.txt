@@ -1,0 +1,5 @@
+project bootstraped with npm create vite@latest
+
+its a movie site with an api that fetches movies and its info like netflex/MDB
+
+npm i react-slick

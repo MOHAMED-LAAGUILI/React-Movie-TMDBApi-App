@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Tailwind CSS */
+.dark {
+  --bg-color: #171a1f; /* Example dark background color */
+  --text-color: #EDF2F7; /* Example light text color */
+}
+
+/* Use CSS variables in your styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+
+.play-icon {
+    position: relative;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+    animation: wave 1.5s infinite;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transform: translate(-50%, -50%);
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
